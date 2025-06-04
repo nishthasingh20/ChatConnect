@@ -1,20 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Dimensions, SafeAreaView } from 'react-native';
+import { StyleSheet } from 'react-native';
+import WelcomeScreen from './screens/WelcomeScreen';
 
 export default function App() {
-  console.log(Dimensions.get("screen"));
-  
   return (
-    <SafeAreaView style={styles.container}>
-      <View style ={{
-        backgroundColor: "lightblue",
-        width: "50%",
-        height: 70,
-      }}>
-
-      </View>
-
-    </SafeAreaView>
+    <>
+      <WelcomeScreen />
+      <StatusBar style="auto" />
+    </>
   );
 }
 
