@@ -9,35 +9,37 @@ import {
   Dimensions,
   Image,
 } from 'react-native';
+import { ImageBackground } from 'react-native';
 
 const { width, height } = Dimensions.get('window');
 
 const WelcomeScreen = ({ navigation }) => {
   const handleSignIn = () => {
-    // Navigate to sign in screen
-    // navigation.navigate('SignIn');
-    console.log('Navigate to Sign In');
+    navigation.navigate('SignIn');
+    console.log('Swtiched to SignIn screen');
   };
 
   const handleRegister = () => {
     // Navigate to register screen
-    // navigation.navigate('Register');
+    // navigation.navigate('RegisterScreen');
     console.log('Navigate to Register');
   };
 
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="dark-content" backgroundColor="#F5E6D3" />
-      
-      {/* Grid Background */}
-      <View style={styles.gridOverlay} />
-      
-      <View style={styles.content}>        {/* Logo Section */}
-        <View style={styles.logoSection}>
-          <Image 
+      <ImageBackground 
+        source={require('./assets/bg-image-more-hd.png')} 
+        style={styles.backgroundImage}
+        resizeMode="cover"
+      >
+        <View style={styles.content}>{/* Logo Section */}
+        <View style={styles.logoSection}>          <Image 
             source={require('./assets/logo-image.png')}
             style={styles.logo}
             resizeMode="contain"
+            accessible={true}
+            accessibilityLabel="Chat Connect Logo"
           />
           <Text style={styles.appTitle}>CHAT CONNECT</Text>
           <Text style={styles.tagline}>TALK. SHARE. CONNECT.</Text>
@@ -51,14 +53,15 @@ const WelcomeScreen = ({ navigation }) => {
           </Text>
         </View>
 
-        {/* Action Buttons */}
-        <View style={styles.buttonSection}>
+        {/* Action Buttons */}        <View style={styles.buttonSection}>
           <TouchableOpacity 
             style={styles.primaryButton} 
             onPress={handleRegister}
             activeOpacity={0.8}
           >
-            <Text style={styles.primaryButtonText}>Get Started</Text>
+            <Text style={styles.primaryButtonText} numberOfLines={1}>
+              Get Started
+            </Text>
           </TouchableOpacity>
 
           <TouchableOpacity 
@@ -66,10 +69,12 @@ const WelcomeScreen = ({ navigation }) => {
             onPress={handleSignIn}
             activeOpacity={0.8}
           >
-            <Text style={styles.secondaryButtonText}>I already have an account</Text>
-          </TouchableOpacity>
+            <Text style={styles.secondaryButtonText} numberOfLines={1}>
+              I already have an account
+            </Text>          </TouchableOpacity>
         </View>
       </View>
+      </ImageBackground>
     </SafeAreaView>
   );
 };
@@ -77,18 +82,14 @@ const WelcomeScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5E6D3',
   },
-  gridOverlay: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    opacity: 0.1,
-    backgroundColor: 'transparent',
-    // Add grid pattern using border if needed
-  },  content: {
+  backgroundImage: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+    opacity: 0.9,
+  },
+  content: {
     flex: 1,
     paddingHorizontal: 30,
     justifyContent: 'space-evenly', // Changed from space-between for better distribution
@@ -103,16 +104,16 @@ const styles = StyleSheet.create({
     width: 140,
     height: 140,
     marginBottom: 7,
-  },
-  appTitle: {
+  },  appTitle: {
     fontSize: 28,
-    fontWeight: 'bold',
+    fontFamily: 'Poppins-Bold',
     color: '#8B4513',
     letterSpacing: 2,
     marginTop: 20,
   },
   tagline: {
     fontSize: 14,
+    fontFamily: 'Poppins-Medium',
     color: '#8B4513',
     letterSpacing: 1.5,
     marginTop: 8,
