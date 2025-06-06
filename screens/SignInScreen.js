@@ -169,10 +169,9 @@ const styles = StyleSheet.create({
     width: 70,
     height: 70,
     marginBottom: 40,
-  },
-  slogan: {
+  },  slogan: {
     color: '#fff',
-    fontWeight: 'bold',
+    fontFamily: 'Bitter-Bold',
     fontSize: 18,
     letterSpacing: 2,
     paddingBottom: 10,
@@ -180,14 +179,14 @@ const styles = StyleSheet.create({
   tagline: {
     color: '#fff',
     fontSize: 12,
+    fontFamily: 'Bitter-Medium',
     letterSpacing: 1.2,
     marginBottom: 10,
     opacity: 0.8,
-  },
-  welcomeText: {
+  },  welcomeText: {
     color: '#fff',
     fontSize: 28,
-    fontWeight: 'bold',
+    fontFamily: 'Bitter-Bold',
     marginTop: 8,
     marginBottom: 5,
     opacity: 0.95,
@@ -204,23 +203,22 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.06,
     shadowRadius: 8,
     elevation: 2,
-  },
-  loginTitle: {
+  },  loginTitle: {
     color: '#964B00',
     fontSize: 20,
-    fontWeight: 'bold',
+    fontFamily: 'Bitter-Bold',
     marginBottom: 18,
     alignSelf: 'flex-start',
   },
   inputContainer: {
     marginBottom: 16,
-  },
-  textInput: {
+  },  textInput: {
     backgroundColor: '#F3F6F6',
     borderRadius: 16,
     paddingHorizontal: 18,
     paddingVertical: 14,
     fontSize: 16,
+    fontFamily: 'Bitter-Regular',
     color: '#1B6B63',
     borderWidth: 1.5,
     borderColor: '#E0E0E0',
@@ -228,11 +226,10 @@ const styles = StyleSheet.create({
   forgotPassword: {
     alignSelf: 'flex-end',
     marginBottom: 18,
-  },
-  forgotPasswordText: {
+  },  forgotPasswordText: {
     color: '#964B00',
     fontSize: 14,
-    fontWeight: '500',
+    fontFamily: 'Bitter-Regular',
   },
   primaryButton: {
     backgroundColor: '#ab7457',
@@ -251,11 +248,10 @@ const styles = StyleSheet.create({
   },
   disabledButton: {
     opacity: 0.6,
-  },
-  primaryButtonText: {
+  },  primaryButtonText: {
     color: '#fff',
     fontSize: 18,
-    fontWeight: 'bold',
+    fontFamily: 'Bitter-Bold',
     textAlign: 'center',
   },
   socialRow: {
@@ -282,12 +278,13 @@ const styles = StyleSheet.create({
   signupPromptText: {
     color: '#A0A0A0',
     fontSize: 15,
+    fontFamily: 'Bitter-Regular'
   },
   signupLink: {
     color: '#964B00',
     fontSize: 15,
-    fontWeight: 'bold',
     marginLeft: 2,
+    fontFamily: 'Bitter-Bold'
   },
 });
 

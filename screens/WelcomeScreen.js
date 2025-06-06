@@ -106,31 +106,31 @@ const styles = StyleSheet.create({
     marginBottom: 7,
   },  appTitle: {
     fontSize: 28,
-    fontFamily: 'Poppins-Bold',
+    fontFamily: 'Bitter-Bold',
     color: '#8B4513',
     letterSpacing: 2,
     marginTop: 20,
   },
   tagline: {
     fontSize: 14,
-    fontFamily: 'Poppins-Medium',
+    fontFamily: 'Bitter-Medium',
     color: '#8B4513',
     letterSpacing: 1.5,
     marginTop: 8,
     opacity: 0.8,
-  },  welcomeSection: {
+  },welcomeSection: {
     alignItems: 'center',
     paddingHorizontal: 20,
     marginTop: -height * 0.02, // Added negative margin to reduce space from logo section
-  },
-  welcomeTitle: {
+  },  welcomeTitle: {
     fontSize: 32,
-    fontWeight: 'bold',
+    fontFamily: 'Bitter-Bold',
     color: '#8B4513',
     marginBottom: 10,
   },
   welcomeSubtitle: {
     fontSize: 16,
+    fontFamily: 'Bitter-Regular',
     color: '#8B4513',
     textAlign: 'center',
     lineHeight: 25,
@@ -152,11 +152,10 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.3,
     shadowRadius: 8,
     elevation: 8,
-  },
-  primaryButtonText: {
+  },  primaryButtonText: {
     color: '#F5E6D3',
     fontSize: 18,
-    fontWeight: 'bold',
+    fontFamily: 'Bitter-Bold',
     textAlign: 'center',
   },
   secondaryButton: {
@@ -165,11 +164,10 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     borderWidth: 2,
     borderColor: '#8B4513',
-  },
-  secondaryButtonText: {
+  },  secondaryButtonText: {
     color: '#8B4513',
     fontSize: 16,
-    fontWeight: '600',
+    fontFamily: 'Bitter-SemiBold',
     textAlign: 'center',
   },
 });
