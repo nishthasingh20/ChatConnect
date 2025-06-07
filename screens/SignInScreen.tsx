@@ -83,7 +83,7 @@ const SignInScreen = ({ navigation }) => {
 
           {/* Login Card (no bg image) */}
           <View style={styles.formSection}>
-            <Text style={styles.loginTitle}>Login</Text>
+            <Text style={styles.loginTitle}>Sign In</Text>
             <View style={styles.inputContainer}>
               <TextInput
                 style={styles.textInput}
@@ -116,7 +116,7 @@ const SignInScreen = ({ navigation }) => {
               disabled={isLoading}
             >
               <Text style={styles.primaryButtonText}>
-                {isLoading ? 'Signing In...' : 'Login'}
+                {isLoading ? 'Signing In...' : 'Sign In'}
               </Text>
             </TouchableOpacity>
             <View style={styles.socialRow}>
@@ -203,7 +203,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.06,
     shadowRadius: 8,
     elevation: 2,
-  },  loginTitle: {
+  },  
+  loginTitle: {
     color: '#964B00',
     fontSize: 20,
     fontFamily: 'Bitter-Bold',
@@ -212,21 +213,23 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     marginBottom: 16,
-  },  textInput: {
+  },  
+  textInput: {
     backgroundColor: '#F3F6F6',
     borderRadius: 16,
     paddingHorizontal: 18,
     paddingVertical: 14,
     fontSize: 16,
     fontFamily: 'Bitter-Regular',
-    color: '#1B6B63',
+    color: 'black',
     borderWidth: 1.5,
     borderColor: '#E0E0E0',
   },
   forgotPassword: {
     alignSelf: 'flex-end',
     marginBottom: 18,
-  },  forgotPasswordText: {
+  },  
+  forgotPasswordText: {
     color: '#964B00',
     fontSize: 14,
     fontFamily: 'Bitter-Regular',
