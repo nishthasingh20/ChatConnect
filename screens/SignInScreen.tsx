@@ -183,7 +183,8 @@ const styles = StyleSheet.create({
     letterSpacing: 1.2,
     marginBottom: 10,
     opacity: 0.8,
-  },  welcomeText: {
+  },  
+  welcomeText: {
     color: '#fff',
     fontSize: 28,
     fontFamily: 'Bitter-Bold',
@@ -196,7 +197,7 @@ const styles = StyleSheet.create({
     width: '88%',
     borderRadius: 24,
     padding: 24,
-    marginTop: 32,
+    marginTop: 60,
     alignSelf: 'center',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },

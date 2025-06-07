@@ -18,11 +18,9 @@ const WelcomeScreen = ({ navigation }) => {
     navigation.navigate('SignIn');
     console.log('Swtiched to SignIn screen');
   };
-
   const handleRegister = () => {
-    // Navigate to register screen
-    // navigation.navigate('RegisterScreen');
-    console.log('Navigate to Register');
+    navigation.navigate('RegisterScreen');
+    console.log('Switched to Register Screen');
   };
 
   return (
