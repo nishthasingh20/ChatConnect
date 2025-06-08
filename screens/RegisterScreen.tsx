@@ -12,6 +12,7 @@ import {
   Platform,
   Alert,
   ImageBackground,
+  Image,
 } from 'react-native';
 
 const RegisterScreen = ({ navigation }) => {
@@ -100,12 +101,18 @@ const RegisterScreen = ({ navigation }) => {
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={styles.keyboardAvoidingView}
       >
-        <ScrollView contentContainerStyle={styles.scrollContent}>
-          {/* Header */}
+        <ScrollView contentContainerStyle={styles.scrollContent}>          {/* Header */}
           <View style={styles.header}>
-            <TouchableOpacity onPress={goBack} style={styles.backButton}>
-              <Text style={styles.backButtonText}>← Back</Text>
-            </TouchableOpacity>
+            <View style={styles.headerTop}>
+              <TouchableOpacity onPress={goBack} style={styles.backButton}>
+                <Text style={styles.backButtonText}>← Back</Text>
+              </TouchableOpacity>
+              <Image
+                source={require('./assets/logo-image.png')}
+                style={styles.logo}
+                resizeMode="contain"
+              />
+            </View>
             <Text style={styles.headerTitle}>Create Account</Text>
             <Text style={styles.headerSubtitle}>Join the conversation</Text>
           </View>
@@ -205,18 +212,30 @@ const styles = StyleSheet.create({
   scrollContent: {
     flexGrow: 1,
     paddingHorizontal: 30,
-  },
-  header: {
+  },  header: {
     alignItems: 'center',
     paddingTop: 20,
     paddingBottom: 40,
   },
-  backButton: {
-    alignSelf: 'flex-start',
+  headerTop: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
     marginBottom: 20,
-    marginTop: 35,
+  },
+  logo: {
+    width: 70,
+    height: 70,
+    marginRight: 130,
+    marginTop: 30,
+    marginBottom: -15,
+    alignItems: 'center',
+  },
+  backButton: {
     paddingVertical: 8,
     paddingHorizontal: 4,
+    marginTop: 40,
   },
   backButtonText: {
     color: '#8B4513',
@@ -236,6 +255,7 @@ const styles = StyleSheet.create({
     fontFamily: "Bitter-Regular",
     opacity: 0.8,
     marginTop: 8,
+    textAlign: 'center',
   },
   form: {
     flex: 1,
