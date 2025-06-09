@@ -212,7 +212,8 @@ const styles = StyleSheet.create({
   scrollContent: {
     flexGrow: 1,
     paddingHorizontal: 30,
-  },  header: {
+  },  
+  header: {
     alignItems: 'center',
     paddingTop: 20,
     paddingBottom: 40,
@@ -228,7 +229,7 @@ const styles = StyleSheet.create({
     width: 70,
     height: 70,
     marginRight: 130,
-    marginTop: 30,
+    marginTop: 18,
     marginBottom: -15,
     alignItems: 'center',
   },
